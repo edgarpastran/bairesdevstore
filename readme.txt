@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------
-DESCRIPCION
+DESCRIPCION DEL PROYECTO
 ------------------------------------------------------------------------------
 BAiresDevStore es una aplicacion web que permite la administracion de productos 
 (Alta, Baja, Modificacion), con las siguientes entidades:
