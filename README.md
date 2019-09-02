@@ -89,39 +89,47 @@ INSTRUCTIONS FOR EDITING, REVIEWING AND EXECUTING THE CODE
    therefore you can download them and put them in your work space 
    if you use this IDE, else, you also can review their content in any other IDE.
 
-2. You must ceate the database, then using a shell you must go to the directory
-   `simple-store-server/bd/`. If you are usign as Operting System a version of 
+2. You must create the database, then using a shell you must go to the directory
+   `simple-store-server/bd/`. If you are using as Operating System a version of 
    Windows you can execute the file `builDB.bat`, else, execute the next command:
    `psql -U postgres -f script.sql`
 
 3. Optionally you can insert records into the database recent created. Whether you want
-   do it you can execute the file `insertData.bat` if you are a Windows user, else, 
+   to do it you can execute the file `insertData.bat` if you are a Windows user, else, 
    you must execute the next command: `psql -U postgres -f data.sql` 
    
-3. Opcionalmente puedes insertar registros en la base de datos recien creada. Si quieres
-   hacerlo puedes ejecutar el archivo `insertData.bat` si eres usuario de Windows, sino, 
-   ejecuta el siguiente comando: `psql -U postgres -f data.sql` 
+4. Load both projects in your IDE and after you must update the user credentials 
+   for PostgreSQL in order to be able to connect to the recent created database. For that 
+   find the file `simple-store-server\src\main\resources\META-INF\persistence.xml` and write
+   the correct credential for your case.
 
-4. Carga ambos proyectos en tu IDE y luego debes modificar las credenciales del usuario 
-   de PostgreSQL que te permitira conectarte a la BD recien creada. Para ello ubica el
-   archivo `simple-store-server\src\main\resources\META-INF\persistence.xml` y coloca
-   las credenciales correctas para tu caso.
-
-5. Corre las 2 aplicaciones desde tu IDE usando un servidor de aplicaciones como 
-   Apache Tomcat y en un navegador coloca la siguiente URL:
+5. Run the 2 applications from your IDE using an application server like
+   Apache Tomcat and in a browser go to the next URL:
    `http://localhost:8080/simple-store-client/`
-
+   
 6. Play with the application.
 
 ------------------------------------------------------------------------------
-OBSERVACIONES
+OBSERVACIONES / OBSERVATIONS
 ------------------------------------------------------------------------------
+# Español
 Como en la contruccion de este software se uso Maven, tu puedes desplegar 
 estas aplicaciones en archivos war para que se ejecuten en Tomcat.
 Para ello en el shell debes ir al direcorio donde se encuentran los proyectos
-y ejecutar el siguiente comando: "mvn tomcat:deploy". Pero, previamente
+y ejecutar el siguiente comando: `mvn tomcat:deploy`. Pero, previamente
 tu debes tener configurado en tu maquina Maven con Tomcat.
 
 Puedes leer mas acerca de esto en las siguientes paginas:
+- http://www.mkyong.com/maven/how-to-deploy-maven-based-war-file-to-tomcat/
+- http://kosalads.blogspot.com/2014/03/maven-deploy-war-in-tomcat-7.html
+
+# English
+In the building of this software was used Maven, therefore you can deploy
+these applications in war files in order to be used in Tomcat.
+For that in the shell you must go to the directory where are the projects
+and excute the next command: `mvn tomcat:deploy`. But, previously
+you must have configured in your machine Maven with Tomcat.
+
+You can read more about this in the next pages:
 - http://www.mkyong.com/maven/how-to-deploy-maven-based-war-file-to-tomcat/
 - http://kosalads.blogspot.com/2014/03/maven-deploy-war-in-tomcat-7.html
